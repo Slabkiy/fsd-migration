@@ -131,4 +131,101 @@ src/
 
 ## Пример
 
-//TODO. Написать пример на основании какой-нибудь страницы
+До миграции
+
+```
+├── app/
+│	├── AppRoutes.tsx
+│	├── index.ts
+├── pages/                  
+│   ├── RoutesPage/          
+│	│	├── components/
+│	│	│	├── CreateRouteButton/
+│	│	│	│	├── CreateRouteButton.tsx
+│	│	│	│	├── index.ts
+│	│	│	├── Header/
+│	│	│	│	├── Header.tsx
+│	│	│	│	├── Header.module.scss
+│	│	│	│	├── HeaderCaption.ts
+│	│	│	│	├── index.ts
+│	│	│	├── RouteFormSidePage/
+│	│	│	├── RoutesImports/
+│	│	│	├── RoutesPage/
+│	│	│	├── RoutesTable/
+│	│	├── helpers/
+│	│	│	├── index.ts
+│	│	│	├── RoutesPage.constants.ts
+│	│	├── stores/
+│	│	│	├── index.ts
+│	│	│	├── RoutePage.store.ts
+│	│	│	├── RoutePageContext.tsx
+│	│	│	├── RoutesPageFilters.store.ts
+│	│	├── types/
+│	│	│	├── index.ts
+│	│	│	├── RoutesPageFilters.ts
+│	│	├── index.ts        
+├── routes
+	├── hooks
+	│	├── useRoutesPageFilters.ts
+	│	├── ...
+	│	├── index.ts
+	├── navigators
+	│	├── RoutesPageNavigator.ts
+	│	├── ...
+	│	├── index.ts
+	├── parsers
+	│	├── RoutesPageFiltesParser.ts
+	│	├── ...
+	│	├── index.ts
+
+```
+
+После миграции миграции:
+
+```bash
+src/
+├── app/
+│   ├── AppRoutes.tsx
+│   └── index.ts
+│
+├── pages/
+│   └── route-templates/
+│       ├── ui/
+│       │   └── RoutesTemplate.tsx
+│       └── index.ts
+│
+├── features/
+│   └── route-templates/
+│       ├── ui/
+│       │   ├── CreateRouteButton/
+│       │   ├── Header/
+│       │   ├── RouteFormSidePage/
+│       │   ├── RouteTemplatesTable/
+│       │   └── RouteTemplates.tsx
+│       │
+│       ├── model/
+│       │   ├── store/
+│       │   │   └── RoutesTemplatesStore.ts
+│       │   │
+│       │   ├── filters/
+│       │   │   ├── RouteTemplatesFiltersStore.ts
+│       │   │   ├── RouteTemplatesFiltersParser.ts
+│       │   │   └── useRouteTemplatesFilters.ts
+│       │   │
+│       │   └── context/
+│       │       ├── RouteTemplatesContext.ts
+│       │       └── useRouteTemplatesContext.ts
+│       │
+│       ├── lib/
+│       │   └── constants.ts
+│       │
+│       └── types/
+│           └── filters.ts
+│
+└── shared/
+    └── lib/
+	    ├── navigation
+		│    └── RouteTemplatesNavigator.ts
+		│
+        └── ...                     # Только действительно общие утилиты
+```

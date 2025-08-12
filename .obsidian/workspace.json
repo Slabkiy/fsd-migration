@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Синхроны с командой.md",
+                "file": "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Синхроны с командой"
+              "title": "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Синхроны с командой.md",
+                "file": "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Синхроны с командой"
+              "title": "Обратные ссылки для Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Синхроны с командой.md",
+                "file": "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из Синхроны с командой"
+              "title": "Исходящие ссылки из Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Синхроны с командой.md",
+                "file": "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура Синхроны с командой"
+              "title": "Структура Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT"
             }
           },
           {
@@ -166,7 +166,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 820.5
+    "width": 541.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,8 +182,10 @@
   },
   "active": "98db1cf5870d49e2",
   "lastOpenFiles": [
-    "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
     "Синхроны с командой.md",
+    "site/синхроны-с-командой.html",
+    "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
+    "Pasted image 20250812145455.png",
     "site/site-lib/search-index.json",
     "site/site-lib/metadata.json",
     "site/site-lib/styles/other-plugins.css",
@@ -193,7 +195,6 @@
     "site/site-lib/scripts/webpage.js",
     "site/site-lib/scripts/graph-wasm.wasm",
     "site/site-lib/scripts/graph-wasm.js",
-    "site/site-lib/scripts/graph-render-worker.js",
     "site/site-lib/media/favicon.png",
     "site/site-lib/media/6155340132a851f6089e.svg",
     "site/site-lib/media/2308ab1944a6bfa5c5b8.svg",
