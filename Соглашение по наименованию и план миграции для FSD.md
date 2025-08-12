@@ -1,11 +1,6 @@
 ## 1. Структура папок (kebab-case)
 
-text
-
-Copy
-
-Download
-
+```bash
 src/
   pages/
     feature-name/       # Папка фичи в kebab-case
@@ -14,6 +9,8 @@ src/
       model/            # Бизнес-логика
       lib/              # Вспомогательные функции
       ComponentName.tsx # Основной компонент
+```
+
 
 ## 2. Именование файлов
 

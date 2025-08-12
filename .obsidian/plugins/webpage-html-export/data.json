@@ -10,7 +10,7 @@
     "postProcess": true,
     "displayProgress": true,
     "inlineHTML": false,
-    "exportPath": "W:\\Obsidian\\fsd-migration",
+    "exportPath": "W:\\Obsidian\\fsd-migration\\site",
     "filesToExport": [
       "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
       "Мотивация перехода на Feature-Sliced Design (FSD) для быстрорастущего проекта.md",
@@ -211,7 +211,7 @@
     "inlineFonts": false,
     "inlineOther": false,
     "combineAsSingleFile": false,
-    "offlineResources": false,
+    "offlineResources": true,
     "themeName": "",
     "slugifyPaths": true,
     "flattenExportPaths": false,
@@ -220,7 +220,9 @@
     "siteName": "fsd-migration",
     "iconEmojiStyle": "Native",
     "exportRoot": "",
-    "includePluginCss": [],
+    "includePluginCss": [
+      "obsidian-git"
+    ],
     "includeStyleCssIds": [],
     "autoDisposeWebpages": true
   },

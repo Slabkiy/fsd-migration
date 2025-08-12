@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[fsd-migration]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>fsd-migration</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 12 Aug 2025 10:34:08 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 12 Aug 2025 10:34:06 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT]]></title><description><![CDATA[Feature-Sliced Design (FSD) - это современный подход к организации структуры проекта, который фокусируется на бизнес-логике и функциональности приложения. Вот как можно мигрировать вашу текущую структуру на FSD:
+App - Инициализация приложения, настройки, провайдеры
+Pages - Страницы приложения
+Features - Бизнес-фичи, содержащие логику
+Entities - Бизнес-сущности
+Shared - Общие компоненты, утилиты, стили
+Создайте новую структуру папок согласно FSD:src/
+├── app/ # Инициализация приложения
+│ ├── providers/ # Провайдеры контекста
+│ ├── styles/ # Глобальные стили
+│ └── index.tsx # Входная точка приложения
+│
+├── pages/ # Страницы приложения
+│ ├── processes/ # Страница процессов
+│ ├── employees/ # Страница сотрудников
+│ └── ... # Другие страницы
+│
+├── features/ # Бизнес-фичи
+│ ├── process-actions/ # Фича работы с процессами
+│ ├── employee-management # Фича управления сотрудниками
+│ └── ... # Другие фичи
+│
+├── entities/ # Бизнес-сущности
+│ ├── process/ # Сущность процесса
+│ ├── employee/ # Сущность сотрудника
+│ └── ... # Другие сущности
+│
+├── shared/ # Общие ресурсы
+│ ├── api/ # API клиенты
+│ ├── ui/ # UI компоненты
+│ ├── lib/ # Утилиты и хелперы
+│ └── config/ # Конфигурации
+│
+└── widgets/ # Виджеты (опционально) Перенесите App.tsx, AppRoutes.tsx, провайдеры (AuthProvider, OrganizationStoreProvider и т.д.) в app/
+Глобальные стили и темы - в app/styles/ Существующие страницы (EmployeesPage, ProcessesPage и т.д.) перенесите в pages/, сохраняя их текущую структуру Бизнес-логику из компонентов выделите в фичи: process-actions - для работы с процессами (подписание, согласование и т.д.)
+employee-management - для управления сотрудниками
+document-routing - для маршрутизации документов
+И другие бизнес-фичи Определите ключевые сущности вашего приложения: process - всё, что связано с процессами
+employee - данные и логика сотрудников
+organization - организация и её структура
+template - шаблоны документов Общие компоненты (Button, Input, Modal и т.д.) - в shared/ui/
+API клиенты и типы - в shared/api/
+Утилиты и хелперы - в shared/lib/
+Конфигурации - в shared/config/
+Пример 1: EmployeeEditorТекущий путь: src/components/EmployeeEditor/После миграции:
+UI часть: shared/ui/employee-editor/
+Бизнес-логика: features/employee-management/
+Типы и модели: entities/employee/
+Пример 2: ProcessBulkActionsТекущий путь: src/components/ProcessBulkActions/После миграции:
+UI часть: shared/ui/process-bulk-actions/
+Бизнес-логика: features/process-actions/
+Типы и модели: entities/process/ API клиенты перенесите в shared/api/
+Глобальные хранилища (как OrganizationStore) - в app/providers/
+Локальные хранилища для фич - внутри соответствующих фич Конфигурацию роутинга оставьте в app/routing/
+Навигационные хуки можно разместить в features/ или shared/lib/hooks/ Глобальные стили - в app/styles/
+Стили компонентов - рядом с компонентами
+Общие стилевые константы - в shared/config/styles/ Постепенная миграция: Начните с одной страницы или фичи, отработайте подход.
+Сначала структура, потом код: Сначала создайте новую структуру, затем переносите код.
+Рефакторинг по ходу: Используйте возможность улучшить код при переносе.
+Тестирование: После каждого этапа проверяйте работоспособность.
+Документация: Ведите документацию новой структуры для команды. ESLint: Настройте правила для соблюдения FSD
+Plop.js: Для генерации шаблонов новых компонентов
+Storybook: Для документирования UI компонентов
+Миграция на FSD поможет улучшить поддерживаемость кода, упростит навигацию по проекту и сделает архитектуру более масштабируемой.]]></description><link>миграция-архитектуры-проекта-на-feature-sliced-design-(fsd)-gpt.html</link><guid isPermaLink="false">Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md</guid><pubDate>Tue, 12 Aug 2025 10:09:16 GMT</pubDate></item><item><title><![CDATA[Соглашение по наименованию и план миграции для FSD]]></title><description><![CDATA[src/ pages/ feature-name/ # Папка фичи в kebab-case index.ts # Реэкспорт ui/ # UI-компоненты страницы model/ # Бизнес-логика lib/ # Вспомогательные функции ComponentName.tsx # Основной компонент
+Пример полного пути для вашего случая:src/ pages/ process/ index.ts # export { ProcessPage } from './ui/ProcessPage' ui/ ProcessPage.tsx # Основной компонент ProcessList.tsx # Список процессов model/ useProcessData.ts # Логика загрузки lib/ helpers.ts # Утилиты
+Новые компоненты:# Старая структура:
+src/components/EmployeeEditor/EmployeeEditor.tsx # Новая структура:
+src/features/employee-management/EmployeeEditor.tsx
+]]></description><link>соглашение-по-наименованию-и-план-миграции-для-fsd.html</link><guid isPermaLink="false">Соглашение по наименованию и план миграции для FSD.md</guid><pubDate>Tue, 12 Aug 2025 09:56:50 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[<a data-tooltip-position="top" aria-label="https://feature-sliced.github.io/documentation/ru/docs" rel="noopener nofollow" class="external-link is-unresolved" href="https://feature-sliced.github.io/documentation/ru/docs" target="_self">Документация</a><br>
+<a data-href="Мотивация перехода на Feature-Sliced Design (FSD) для быстрорастущего проекта" href="мотивация-перехода-на-feature-sliced-design-(fsd)-для-быстрорастущего-проекта.html" class="internal-link" target="_self" rel="noopener nofollow">Мотивация перехода на Feature-Sliced Design (FSD) для быстрорастущего проекта</a><br>
+<a data-href="Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT" href="миграция-архитектуры-проекта-на-feature-sliced-design-(fsd)-gpt.html" class="internal-link" target="_self" rel="noopener nofollow">Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT</a><br>
+<a data-href="Соглашение по наименованию и план миграции для FSD" href="соглашение-по-наименованию-и-план-миграции-для-fsd.html" class="internal-link" target="_self" rel="noopener nofollow">Соглашение по наименованию и план миграции для FSD</a>]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Tue, 12 Aug 2025 08:29:55 GMT</pubDate></item><item><title><![CDATA[Мотивация перехода на Feature-Sliced Design (FSD) для быстрорастущего проекта]]></title><description><![CDATA[ Сложность навигации по кодовой базе: Смешение UI, бизнес-логики и инфраструктурного кода в компонентах
+Отсутствие чётких правил расположения файлов
+Трудности с поиском связанной функциональности Проблемы с масштабированием команды: Высокий порог входа для новых разработчиков
+Конфликты при работе над смежными областями
+Трудности с распределением зон ответственности Технический долг: Сильная связанность компонентов
+Дублирование кода
+Трудности с изолированным тестированием Чёткие правила организации кода: Каждый разработчик сразу понимает, куда что класть
+Изолированные фичи: Возможность разрабатывать и тестировать функциональность независимо
+Гибкость изменений: Легче вносить изменения в отдельные бизнес-области Чёткое разделение ответственности: Frontend-разработчики работают с UI в shared/ui
+Бизнес-логика изолирована в features/
+Разные команды могут владеть разными фичами Параллельная разработка: Снижение связанности: Фичи зависят только от нижележащих слоёв
+Нет циклических зависимостей Упрощение тестирования: Бизнес-логика изолирована от UI
+Легче писать unit- и интеграционные тесты Более предсказуемый рефакторинг Отражает продуктовую структуру: Фичи соответствуют бизнес-возможностям продукта
+Легче сопоставить код с требованиями бизнеса Упрощение онбординга: Новые разработчики быстрее понимают структуру
+Чёткое соответствие между задачами и местами изменений Управление сложностью: Ваш проект уже имеет множество сущностей (процессы, сотрудники, организации)
+FSD предоставляет чёткие правила для их организации Оптимизация работы распределённой команды: Разные команды могут работать над разными фичами с минимальными конфликтами
+Упрощается code review (ревьюверы понимают контекст по расположению файлов) Поддержка микрофронтендов (если потребуется): FSD естественным образом подготавливает архитектуру к возможному переходу на микрофронтенды Улучшение переиспользования кода: Чёткое разделение на общие и специфические части
+Легче выявлять дублирование Текущая ситуация:
+Компонент EmployeeEditor содержит:
+UI (рендеринг формы)
+Логику валидации
+API вызовы
+Логику сохранения
+Локальное состояние
+После перехода на FSD:
+shared/ui/employee-editor/ - только представление
+features/employee-management/api/ - работа с API
+features/employee-management/model/ - бизнес-логика
+entities/employee/types/ - типы данных Временное замедление разработки: Решение: Постепенная миграция, начинать с новых фич Сопротивление команды: Решение: Обучение, документация, инструменты (ESLint правила) Неполная миграция: Решение: Чёткие критерии завершения, контроль архитектуры Для быстрорастущего проекта FSD предлагает:
+Структурную ясность при увеличении кодовой базы
+Эффективное распределение работы в большой команде
+Устойчивость к изменениям бизнес-требований
+Предсказуемость разработки на долгосрочной перспективе
+Переход потребует усилий, но окупится уже в среднесрочной перспективе за счёт снижения стоимости поддержки и ускорения разработки новых функций.]]></description><link>мотивация-перехода-на-feature-sliced-design-(fsd)-для-быстрорастущего-проекта.html</link><guid isPermaLink="false">Мотивация перехода на Feature-Sliced Design (FSD) для быстрорастущего проекта.md</guid><pubDate>Tue, 12 Aug 2025 08:29:09 GMT</pubDate></item><item><title><![CDATA[Синхроны с командой]]></title><description><![CDATA[<a rel="noopener nofollow" class="external-link is-unresolved" href="https://kontur.ktalk.ru/recordings/l7NDteXBu8njjDs3UurZ" target="_self">https://kontur.ktalk.ru/recordings/l7NDteXBu8njjDs3UurZ</a>]]></description><link>синхроны-с-командой.html</link><guid isPermaLink="false">Синхроны с командой.md</guid><pubDate>Tue, 12 Aug 2025 07:36:42 GMT</pubDate></item></channel></rss>
