@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Содержание.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Содержание"
+              "title": "index"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Содержание.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Содержание"
+              "title": "Обратные ссылки для index"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Содержание.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из Содержание"
+              "title": "Исходящие ссылки из index"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Содержание.md",
+                "file": "index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура Содержание"
+              "title": "Структура index"
             }
           },
           {
@@ -182,21 +182,26 @@
   },
   "active": "98db1cf5870d49e2",
   "lastOpenFiles": [
-    "public/site-lib/search-index.json",
-    "public/site-lib/metadata.json",
+    "index.html",
+    "index.md",
     "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
+    "содержание.html",
+    "соглашение-по-наименованию-и-план-миграции-для-fsd.html",
+    "синхроны-с-командой.html",
+    "мотивация-перехода-на-feature-sliced-design-(fsd)-для-быстрорастущего-проекта.html",
+    "миграция-архитектуры-проекта-на-feature-sliced-design-(fsd)-gpt.html",
+    "site-lib/styles/obsidian.css",
+    "site-lib/styles/main-styles.css",
+    "site-lib/styles/global-variable-styles.css",
+    "site-lib/scripts/webpage.js",
+    "site-lib/scripts/graph-wasm.wasm",
+    "site-lib/media/favicon.png",
+    "site-lib/media/6155340132a851f6089e.svg",
+    "site-lib/media/2308ab1944a6bfa5c5b8.svg",
+    "Мотивация перехода на Feature-Sliced Design (FSD) для быстрорастущего проекта.md",
     "Синхроны с командой.md",
     "Соглашение по наименованию и план миграции для FSD.md",
-    "Мотивация перехода на Feature-Sliced Design (FSD) для быстрорастущего проекта.md",
-    "Содержание.md",
-    "public/site-lib/fonts/b5f0f109bc88052d4000.woff2",
-    "public/site-lib/fonts/cb10ffd7684cd9836a05.woff2",
-    "public/site-lib/fonts/cbe0ae49c52c920fd563.woff2",
-    "public/site-lib/fonts/c8ba52b05a9ef10f4758.woff2",
-    "public/site-lib/fonts/94f2f163d4b698242fef.otf",
-    "public/site-lib/fonts/72505e6a122c6acd5471.woff2",
-    "public/site-lib/fonts/70cc7ff27245e82ad414.ttf",
-    "public/site-lib/fonts/535a6cf662596b3bd6a6.woff2",
+    "README.md",
     "public/site-lib/media/favicon.png",
     "public/site-lib/media/6155340132a851f6089e.svg",
     "public/site-lib/media/2308ab1944a6bfa5c5b8.svg"

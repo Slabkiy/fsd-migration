@@ -10,13 +10,13 @@
     "postProcess": true,
     "displayProgress": true,
     "inlineHTML": false,
-    "exportPath": "W:\\Obsidian\\fsd-migration\\public",
+    "exportPath": "W:\\Obsidian\\fsd-migration",
     "filesToExport": [
       "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
       "Мотивация перехода на Feature-Sliced Design (FSD) для быстрорастущего проекта.md",
       "Синхроны с командой.md",
       "Соглашение по наименованию и план миграции для FSD.md",
-      "Содержание.md"
+      "index.md"
     ],
     "useFallbackRenderer": false,
     "addBodyClasses": true,
