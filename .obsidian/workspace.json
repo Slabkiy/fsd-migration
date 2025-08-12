@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
+                "file": "Соглашение по наименованию и план миграции для FSD.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT"
+              "title": "Соглашение по наименованию и план миграции для FSD"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
+                "file": "Соглашение по наименованию и план миграции для FSD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT"
+              "title": "Обратные ссылки для Соглашение по наименованию и план миграции для FSD"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
+                "file": "Соглашение по наименованию и план миграции для FSD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT"
+              "title": "Исходящие ссылки из Соглашение по наименованию и план миграции для FSD"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
+                "file": "Соглашение по наименованию и план миграции для FSD.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT"
+              "title": "Структура Соглашение по наименованию и план миграции для FSD"
             }
           },
           {
@@ -182,9 +182,11 @@
   },
   "active": "98db1cf5870d49e2",
   "lastOpenFiles": [
+    "Соглашение по наименованию и план миграции для FSD.md",
     "Синхроны с командой.md",
-    "site/синхроны-с-командой.html",
+    "Мотивация перехода на Feature-Sliced Design (FSD) для быстрорастущего проекта.md",
     "Миграция архитектуры проекта на Feature-Sliced Design (FSD) GPT.md",
+    "site/синхроны-с-командой.html",
     "Pasted image 20250812145455.png",
     "site/site-lib/search-index.json",
     "site/site-lib/metadata.json",
@@ -198,9 +200,7 @@
     "site/site-lib/media/favicon.png",
     "site/site-lib/media/6155340132a851f6089e.svg",
     "site/site-lib/media/2308ab1944a6bfa5c5b8.svg",
-    "Мотивация перехода на Feature-Sliced Design (FSD) для быстрорастущего проекта.md",
     "index.md",
-    "Соглашение по наименованию и план миграции для FSD.md",
     "site-lib/media/favicon.png",
     "site-lib/media/6155340132a851f6089e.svg",
     "site-lib/media/2308ab1944a6bfa5c5b8.svg",
